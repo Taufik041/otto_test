@@ -24,7 +24,7 @@ def qualifies_for_bulk(quantity: int) -> bool:
 
     The rule from the pricing sheet: ten units or more qualifies.
     """
-    return quantity > config.BULK_THRESHOLD
+    return quantity >= config.BULK_THRESHOLD
 
 
 def apply_discount(subtotal: float, quantity: int) -> float:
