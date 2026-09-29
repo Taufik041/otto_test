@@ -39,3 +39,6 @@ class Order:
 
     def unit_count(self) -> int:
         return sum(line.quantity for line in self.lines)
+
+    def line_count(self) -> int:
+        return len(self.lines)
