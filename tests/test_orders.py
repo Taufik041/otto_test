@@ -23,3 +23,10 @@ def test_unit_count():
     o.add_line("SKU-1003", 5.00, 3)
     o.add_line("SKU-1004", 5.00, 4)
     assert o.unit_count() == 7
+
+
+def test_line_count():
+    o = Order(order_id="A-4")
+    o.add_line("SKU-1005", 5.00, 3)
+    o.add_line("SKU-1006", 5.00, 4)
+    assert o.line_count() == 2
