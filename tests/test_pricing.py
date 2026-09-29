@@ -17,6 +17,11 @@ def test_bulk_discount_above_threshold():
     assert pricing.line_total(10.00, 20) == 180.00
 
 
+def test_bulk_discount_at_eleven_units():
+    # 11 units * 10.00 = 110.00 - 10% = 99.00
+    assert pricing.line_total(10.00, 11) == 99.00
+
+
 def test_negative_quantity_rejected():
     try:
         pricing.line_subtotal(5.0, -1)
